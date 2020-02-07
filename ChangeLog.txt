@@ -1,0 +1,24 @@
+# ChangeLog #
+
+## Build 0.0.0.1 (07-15-2019) ##
+
+1. Initial release forked from the Optimize-Offline script: https://github.com/DrEmpiricism/Optimize-Offline
+
+2. Added more registry tweaks to disable even more telemetry options + annoyances and to block Windows Telemetry IPs in the Firewall.
+
+3. Useless integrations have been removed, ie: Edge, Dedup, DaRT, Win32Calc.
+
+4. New CLI switches have been added:
+   -Win7GUI (Changes the Default Windows 10 GUI elements into Windows 7-Style ones)
+   -DisableUAC (Disable the UAC and LUA, The User will gain Full Admin Rights)
+
+5. A generic, custom unattend.xml file is included and will be integrated to the offline image (remove from \Resources\Additional\Unattend\ if you don't want it):
+   Local Account by Default (skipped Online Account creation)
+   Privacy settings are skipped in the OOBE
+   Sending installation report to the Microsoft is disabled
+
+6. KMS_VL_ALL by @abbodi1406 is now applied to the SetupComplete.cmd script by default, so your LTSC 2019 x64 installation will automatically activate (remove the files from the \Resources\Additional\Setup\ folder if you prefer to activate manually instead)
+
+7. Script has been fully debugged - i have found some registry mistakes that the original author didn't notice and corrected them myself.
+
+8. Removed some features that fucked up windows like disable UAC and defender.
